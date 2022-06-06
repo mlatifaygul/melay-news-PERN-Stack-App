@@ -6,9 +6,11 @@ exports.up = function (knex) {
     return knex.schema.createTable('news', table => {
         table.increments('newsId');
         table.string('title').notNullable();
-        table.integer('author').unsigned();
+        table.string('authorName').unsigned();
+        table.string('authorLastName').unsigned();
         table.string('news_image');
-        table.foreign('author').references('user.userId').onUpdate('CASCADE').onDelete('CASCADE')
+        table.foreign('authorName').references('user.name').onUpdate('CASCADE').onDelete('CASCADE')
+        table.foreign('authorLastName').references('user.lastName').onUpdate('CASCADE').onDelete('CASCADE')
         table.timestamps(true, true)
 
     })
