@@ -3,11 +3,9 @@
  const {
      PORT
  } = require('./constants')
- const authRoutes = require('./routes/auth')
- const newsRoutes = require('./routes/news')
+ const api = require('./routes')
 
- app.use('/api', authRoutes)
- app.use('/news', newsRoutes)
+ app.use('/', api)
 
  //app start
  const appStart = () => {
