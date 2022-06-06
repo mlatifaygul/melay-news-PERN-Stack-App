@@ -1,9 +1,13 @@
  const express = require('express')
  const app = express()
-const { PORT } = require('./constants')
-const authRoutes = require('./routes/auth')
+ const {
+     PORT
+ } = require('./constants')
+ const authRoutes = require('./routes/auth')
+ const newsRoutes = require('./routes/news')
 
-app.use('/api', authRoutes)
+ app.use('/api', authRoutes)
+ app.use('/news', newsRoutes)
 
  //app start
  const appStart = () => {
