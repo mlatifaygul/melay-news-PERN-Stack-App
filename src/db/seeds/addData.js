@@ -6,17 +6,19 @@
   // Deletes ALL existing entries
   await knex('user').del()
   await knex('user').insert([
-    {userId: 1, name:"Fatih", lastName: "Sarı", email: 'fatih@mail.com', password: 111},
-    {userId: 2, name:"Yaman", lastName: "Güneş", email: 'yaman@mail.com', password: 222},
-    {userId: 3, name:"Kaan", lastName: "Torus", email: 'kaan@mail.com', password: 333},
-    {userId: 4, name:"Fatma", lastName: "Kus", email: 'fatma@mail.com', password: 444}
+    {name:"Fatih", lastName: "Sarı", email: 'fatih@mail.com', password: 111},
+    {name:"Yaman", lastName: "Güneş", email: 'yaman@mail.com', password: 222},
+    {name:"Kaan", lastName: "Torus", email: 'kaan@mail.com', password: 333},
+    {name:"Fatma", lastName: "Kus", email: 'fatma@mail.com', password: 444},
+    {name:"Fatmaa", lastName: "Kuss", email: 'ffatma@mail.com', password: 4444}
+    
   ]);
 
   await knex('news').del()
   await knex('news').insert([
-    {newsId: 1, title: 'rowValue1', author: 1, news_image: "img1.png"},
-    {newsId: 2, title: 'rowValue2', author: 2, news_image: "img2.png"},
-    {newsId: 3, title: 'rowValue3', author: 3, news_image: "img3.png"}
+    {title: 'rowValue1', author: 1, news_image: "img1.png"},
+    {title: 'rowValue2', author: 2, news_image: "img2.png"},
+    {title: 'rowValue3', author: 3, news_image: "img3.png"}
   ]);
   
 };

@@ -4,8 +4,13 @@
      PORT
  } = require('./constants')
  const api = require('./routes')
+ var bodyParser = require('body-parser');
 
- app.use('/', api)
+
+    app.use(bodyParser.urlencoded({extended:true}))
+    app.use(bodyParser.json());
+    app.use(express.json());
+    app.use('/', api)
 
  //app start
  const appStart = () => {
