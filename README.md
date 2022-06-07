@@ -1,7 +1,7 @@
 # Melay News Back-end
 
 
-```bash
+```sh
     git clone https://github.com/mlatifaygul/melay-news-PERN-Stack-App.git
     cd server
     npm i
