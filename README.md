@@ -3,7 +3,7 @@
 
 ```sh
     git clone https://github.com/mlatifaygul/melay-news-PERN-Stack-App.git
-    cd server
+    cd melay-news-PERN-Stack-App
     npm i
     npm run dev
 ```
